@@ -1,0 +1,100 @@
+{
+   "latex-workshop.latex.autoBuild.run": "onSave",
+   "latex-workshop.docker.enabled": true,
+   "latex-workshop.latex.outDir": "./out",
+   "latex-workshop.synctex.afterBuild.enabled": true,
+   "latex-workshop.view.pdf.viewer": "tab",
+   "latex-workshop.docker.image.latex": "blang/latex:ubuntu",
+   "latex-workshop.latex.tools": [
+      {
+         "name": "latexmk",
+         "command": "latexmk",
+         "args": [
+            "-shell-escape",
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "-pdf",
+            "%DOC%"
+         ],
+         "env": {}
+      },
+      {
+         "name": "lualatexmk",
+         "command": "latexmk",
+         "args": [
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "-lualatex",
+            "%DOC%"
+         ],
+         "env": {}
+      },
+      {
+         "name": "latexmk_rconly",
+         "command": "latexmk",
+         "args": [
+            "%DOC%"
+         ],
+         "env": {}
+      },
+      {
+         "name": "pdflatex",
+         "command": "pdflatex",
+         "args": [
+            "-shell-escape",
+            "-synctex=1",
+            "-interaction=nonstopmode",
+            "-file-line-error",
+            "%DOC%"
+         ],
+         "env": {}
+      },
+      {
+         "name": "bibtex",
+         "command": "bibtex",
+         "args": [
+            "%DOCFILE%"
+         ],
+         "env": {}
+      },
+      {
+         "name": "rnw2tex",
+         "command": "Rscript",
+         "args": [
+            "-e",
+            "knitr::opts_knit$set(concordance = TRUE); knitr::knit('%DOCFILE_EXT%')"
+         ],
+         "env": {}
+      },
+      {
+         "name": "jnw2tex",
+         "command": "julia",
+         "args": [
+            "-e",
+            "using Weave; weave(\"%DOC_EXT%\", doctype=\"tex\")"
+         ],
+         "env": {}
+      },
+      {
+         "name": "jnw2texmintex",
+         "command": "julia",
+         "args": [
+            "-e",
+            "using Weave; weave(\"%DOC_EXT%\", doctype=\"texminted\")"
+         ],
+         "env": {}
+      },
+      {
+         "name": "tectonic",
+         "command": "tectonic",
+         "args": [
+            "--synctex",
+            "--keep-logs",
+            "%DOC%.tex"
+         ],
+         "env": {}
+      }
+   ]
+}

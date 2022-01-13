@@ -1,0 +1,33 @@
+\begin{tikzpicture}[
+   mystyle/.style={above, style = {font=\large}}
+]
+
+\begin{axis}[
+   clip = true, ticks = none,
+   enlargelimits = false,
+   scale only axis = true,
+   every axis plot/.append style = {ultra thick},
+   axis x line = middle,
+   axis y line = middle,
+   x label style={at={(axis description cs:0.5,0.0)},anchor=north},
+   y label style={at={(axis description cs:0.0,.5)},rotate=90,anchor=south},
+   xlabel={elements},
+   ylabel={operation},
+   domain = 0:10,
+   xmin = 1,
+   xmax = 11,
+   ymin = 1,
+   ymax = 10000,
+   ymode = log,
+ ]
+  % \addplot[black,samples=1000,smooth,ultra thick,domain=0:10] {x!} node[above,pos=1] {$x!$};
+   %\addplot[red!20,samples=100,smooth,ultra thick,domain=0:10] {2^x} node[above,pos=1] {$x^2$};
+   \addplot[color=direct]       {1}                 node[mystyle]{\(\Omicron(1)\)};
+   \addplot[color=logarithmic]  {log2 x}            node[mystyle]{\(\Omicron(\log n)\)};
+   \addplot[color=linear]      {x}                 node[mystyle]{\(\Omicron(n)\)};
+   \addplot[color=squared]      {x^2}               node[mystyle]{\(\Omicron(n^2)\)};
+   \addplot[color=nlogarithmic] {x*(log2 x)}        node[mystyle]{\(\Omicron(n\log n)\)};
+   \addplot[color=cubed]        {x^3}               node[mystyle]{\(\Omicron(n^3)\)};
+   \addplot[color=factorial,domain= 0:6.5]    gnuplot{gamma(x+1)} node[mystyle, yshift=0.6cm]{\(\Omicron(n!)\)};
+\end{axis}
+\end{tikzpicture}

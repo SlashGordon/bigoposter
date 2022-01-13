@@ -1,0 +1,15 @@
+DataStructure & AverageAccess & AverageSearch & AverageInsertion & AverageDeletion & WorstAccess & WorstSearch & WorstInsertion & WorstDeletion & SpaceComplexity
+Array & BigOTypeA & BigOTypeB & BigOTypeB & BigOTypeB & BigOTypeA & BigOTypeB & BigOTypeB & BigOTypeB & BigOTypeB
+Stack & BigOTypeB & BigOTypeB & BigOTypeA & BigOTypeA & BigOTypeB & BigOTypeB & BigOTypeA & BigOTypeA & BigOTypeB
+Queue & BigOTypeB & BigOTypeB & BigOTypeA & BigOTypeA & BigOTypeB & BigOTypeB & BigOTypeA & BigOTypeA & BigOTypeB
+Singly-Linked List & BigOTypeB & BigOTypeB & BigOTypeA & BigOTypeA & BigOTypeB & BigOTypeB & BigOTypeA & BigOTypeA & BigOTypeB
+Doubly-Linked List & BigOTypeB & BigOTypeB & BigOTypeA & BigOTypeA & BigOTypeB & BigOTypeB & BigOTypeA & BigOTypeA & BigOTypeB
+Skip List & BigOTypeC & BigOTypeC & BigOTypeC & BigOTypeC & BigOTypeB & BigOTypeB & BigOTypeB & BigOTypeB & BigOTypeE
+Hash Table & N/A & BigOTypeA & BigOTypeA & BigOTypeA & N/A & BigOTypeB & BigOTypeB & BigOTypeB & BigOTypeB
+Binary Search Tree & BigOTypeC & BigOTypeC & BigOTypeC & BigOTypeC & BigOTypeB & BigOTypeB & BigOTypeB & BigOTypeB & BigOTypeB
+Cartesian Tree & N/A & BigOTypeC & BigOTypeC & BigOTypeC & N/A & BigOTypeB & BigOTypeB & BigOTypeB & BigOTypeB
+B-Tree & BigOTypeC & BigOTypeC & BigOTypeC & BigOTypeC & BigOTypeC & BigOTypeC & BigOTypeC & BigOTypeC & BigOTypeB
+Red-Black Tree & BigOTypeC & BigOTypeC & BigOTypeC & BigOTypeC & BigOTypeC & BigOTypeC & BigOTypeC & BigOTypeC & BigOTypeB
+Splay Tree & N/A & BigOTypeC & BigOTypeC & BigOTypeC & N/A & BigOTypeC & BigOTypeC & BigOTypeC & BigOTypeB
+AVL Tree & BigOTypeC & BigOTypeC & BigOTypeC & BigOTypeC & BigOTypeC & BigOTypeC & BigOTypeC & BigOTypeC & BigOTypeB
+KD Tree & BigOTypeC & BigOTypeC & BigOTypeC & BigOTypeC & BigOTypeB & BigOTypeB & BigOTypeB & BigOTypeB & BigOTypeB

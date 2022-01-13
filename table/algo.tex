@@ -1,0 +1,56 @@
+\pgfplotstabletypeset[
+   string replace*={BigOTypeF}{$\mathcal{O}(n(\log{}n)^2)$},
+   string replace*={BigOTypeE}{$\mathcal{O}(n\log{}n)$},
+   string replace*={BigOTypeC}{$\mathcal{O}(\log{}n)$},
+   string replace*={BigOTypeD}{$\mathcal{O}(n^2)$},
+   string replace*={BigOTypeH}{$\mathcal{O}(nk)$},
+   string replace*={BigOTypeG}{$\mathcal{O}(n+k)$},
+   string replace*={BigOTypeB}{$\mathcal{O}(n)$},
+   string replace*={BigOTypeA}{$\mathcal{O}(1)$},
+   string replace*={BigOTypeI}{$\mathcal{O}(k)$},
+   every head row/.style={
+      % as in the previous example, this patches the first row:
+      before row={
+         \multicolumn{1}{c}{\textbf{Algorithm}} & \multicolumn{3}{|c}{\textbf{Time Complexity}} & \multicolumn{1}{|c}{\textbf{Space Complexity}}\\
+      },
+   },
+   columns/Algorithm/.style={column name=},
+   columns/SpaceComplexity/.style={column name=Worst},
+   columns/BestTime/.style={column name=Best},
+   columns/WorstTime/.style={column name=Worst},
+   columns/AverageTime/.style={column name=Average},
+   postproc cell content/.style={%
+   @cell content/.add={
+      \ifnum\pdfstrcmp{#1}{BigOTypeA}=0
+         % \cellcolor{direct}
+         \color{direct}
+      \fi
+      \ifnum\pdfstrcmp{#1}{BigOTypeB}=0
+         \color{linear}
+      \fi
+      \ifnum\pdfstrcmp{#1}{BigOTypeC}=0
+         \color{logarithmic}
+      \fi
+      \ifnum\pdfstrcmp{#1}{BigOTypeE}=0
+         \color{nlogarithmic}
+      \fi
+      \ifnum\pdfstrcmp{#1}{BigOTypeD}=0
+         \color{squared}
+      \fi
+      \ifnum\pdfstrcmp{#1}{BigOTypeG}=0
+         \color{linear}
+      \fi
+      \ifnum\pdfstrcmp{#1}{BigOTypeF}=0
+         \color{nlogarithmic}
+      \fi
+      \ifnum\pdfstrcmp{#1}{BigOTypeH}=0
+         \color{linear}
+      \fi
+      \ifnum\pdfstrcmp{#1}{BigOTypeI}=0
+         \color{linear}
+      \fi
+      }{}
+   },
+   string type,
+   col sep= & ,
+]{table/algo.csv}

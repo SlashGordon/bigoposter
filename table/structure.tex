@@ -1,0 +1,46 @@
+\pgfplotstabletypeset[
+   string replace*={BigOTypeF}{$\mathcal{O}(n(\log{}n)^2)$},
+   string replace*={BigOTypeE}{$\mathcal{O}(n\log{}n)$},
+   string replace*={BigOTypeC}{$\mathcal{O}(\log{}n)$},
+   string replace*={BigOTypeD}{$\mathcal{O}(n^2)$},
+   string replace*={BigOTypeH}{$\mathcal{O}(nk)$},
+   string replace*={BigOTypeG}{$\mathcal{O}(n+k)$},
+   string replace*={BigOTypeB}{$\mathcal{O}(n)$},
+   string replace*={BigOTypeA}{$\mathcal{O}(1)$},
+   string replace*={BigOTypeI}{$\mathcal{O}(k)$},
+   every head row/.style={
+      % as in the previous example, this patches the first row:
+      before row={
+         \multicolumn{1}{c}{\textbf{Data Structure}} & \multicolumn{4}{|c|}{\textbf{Average Time Complexity}} & \multicolumn{4}{c}{\textbf{Worst Time Complexity}} & \multicolumn{1}{|c}{\textbf{Worst Space Complexity}}\\
+      },
+   },
+   columns/DataStructure/.style={column name=},
+   columns/SpaceComplexity/.style={column name=},
+   columns/AverageAccess/.style={column name=Access},
+   columns/WorstAccess/.style={column name=Access},
+   columns/AverageSearch/.style={column name=Search},
+   columns/WorstSearch/.style={column name=Search},
+   columns/AverageInsertion/.style={column name=Insertion},
+   columns/WorstInsertion/.style={column name=Insertion},
+   columns/AverageDeletion/.style={column name=Deletion},
+   columns/WorstDeletion/.style={column name=Deletion},
+   postproc cell content/.style={%
+   @cell content/.add={
+      \ifnum\pdfstrcmp{#1}{BigOTypeA}=0
+         % \cellcolor{direct}
+         \color{direct}
+      \fi
+      \ifnum\pdfstrcmp{#1}{BigOTypeB}=0
+         \color{linear}
+      \fi
+      \ifnum\pdfstrcmp{#1}{BigOTypeC}=0
+         \color{logarithmic}
+      \fi
+      \ifnum\pdfstrcmp{#1}{BigOTypeE}=0
+         \color{nlogarithmic}
+      \fi
+      }{}
+   },
+   string type,
+   col sep= & ,
+]{table/structure.csv}

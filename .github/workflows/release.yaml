@@ -1,0 +1,26 @@
+name: RELEASE
+
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build_latex:
+    runs-on: ubuntu-latest
+    container: blang/latex:ubuntu
+    steps:
+      - name: "🔌  checkout repository"
+        uses: actions/checkout@v2
+      - name: "🔨  Build poster"
+        run: pdflatex -shell-escape main.tex
+      - name: "🔨  Check pdf files"
+        run: file main.pdf | grep -q ' PDF ' && mv main.pdf big-o-poster.pdf
+      - name: "🚀 (Github) Release  🚀"
+        uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          automatic_release_tag: "latest"
+          prerelease: true
+          title: "Big-O Cheat Sheet Poster"
+          files: |
+            big-o-poster.pdf

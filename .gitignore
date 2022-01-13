@@ -274,3 +274,8 @@ TSWLatexianTemp*
 
 # Makeindex log files
 *.lpz
+out/*
+main.pgf-plot.vrs
+main.pdf
+main.pgf-plot.gnuplot
+main.pgf-plot.table

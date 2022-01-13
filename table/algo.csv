@@ -1,0 +1,14 @@
+Algorithm & BestTime & AverageTime & WorstTime & SpaceComplexity
+Quicksort & BigOTypeE & BigOTypeE & BigOTypeD & BigOTypeC
+Mergesort & BigOTypeE & BigOTypeE & BigOTypeE & BigOTypeB
+Timsort & BigOTypeB & BigOTypeE & BigOTypeE & BigOTypeB
+Heapsort & BigOTypeE & BigOTypeE & BigOTypeE & BigOTypeA
+Bubble Sort & BigOTypeB & BigOTypeD & BigOTypeD & BigOTypeA
+Insertion Sort & BigOTypeB & BigOTypeD & BigOTypeD & BigOTypeA
+Selection Sort & BigOTypeD & BigOTypeD & BigOTypeD & BigOTypeA
+Tree Sort & BigOTypeE & BigOTypeE & BigOTypeD & BigOTypeB
+Shell Sort & BigOTypeE & BigOTypeF & BigOTypeF & BigOTypeA
+Bucket Sort & BigOTypeG & BigOTypeG & BigOTypeD & BigOTypeB
+Radix Sort & BigOTypeH & BigOTypeH & BigOTypeH & BigOTypeG
+Counting Sort & BigOTypeG & BigOTypeG & BigOTypeG & BigOTypeI
+Cubesort & BigOTypeB & BigOTypeE & BigOTypeE & BigOTypeB
